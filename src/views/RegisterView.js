@@ -3,17 +3,6 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
 // import { useNavigate } from 'react-router-dom';
 
-const styles = {
-  form: {
-    width: 320,
-  },
-  label: {
-    display: 'flex',
-    flexDirection: 'column',
-    marginBottom: 15,
-  },
-};
-
 export default function RegisterView() {
   const dispatch = useDispatch();
   // const navigate = useNavigate();
@@ -33,22 +22,7 @@ export default function RegisterView() {
         return;
     }
   };
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   const { currentTarget: formRef } = event;
-  //   const { email, password, name } = formRef.elements;
-
-  //   const credentials = {
-  //     name: name.value,
-  //     email: email.value,
-  //     password: password.value,
-  //   };
-
-  //   dispatch(authOperations.register(credentials))
-  //     .unwrap()
-  //     .then(() => navigate('/', { replace: true }))
-  //     .catch((error) => {});
-  // };
+ 
   const handleSubmit = e => {
     e.preventDefault();
     dispatch(authOperations.register({ name, email, password }));
@@ -61,13 +35,13 @@ export default function RegisterView() {
     <div>
       <h1>Страница регистрации</h1>
 
-      <form onSubmit={handleSubmit} style={styles.form} autoComplete="off">
-        <label style={styles.label}>
+      <form onSubmit={handleSubmit} className='form' autoComplete="off">
+        <label className='label'>
           Имя
           <input type="text" name="name" value={name} onChange={handleChange} />
         </label>
 
-        <label style={styles.label}>
+        <label className='label'>
           Почта
           <input
             type="email"
@@ -77,12 +51,11 @@ export default function RegisterView() {
           />
         </label>
 
-        <label style={styles.label}>
+        <label className='label'>
           Пароль
           <input
             type="password"
             name="password"
-            // pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$"
             value={password}
             onChange={handleChange}
           />
