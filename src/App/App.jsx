@@ -45,7 +45,7 @@ const  App=()=> {
               element={
                 <RestrictedRoute
                   component={RegisterView}
-                  redirectTo={'/register'}
+                  redirectTo={'/contacts'}
                 />
               }
             />
