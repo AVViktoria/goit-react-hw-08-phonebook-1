@@ -32,7 +32,6 @@ export default function Phonebook() {
         </Container>
         {allContacts.length ? (
           <>
-            {' '}
             <Container>
               <h2 className="title">Contacts</h2>
               <Filter />

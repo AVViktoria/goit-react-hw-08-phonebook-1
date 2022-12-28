@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initPhoneBook } from 'utils/initPhoneBook';
+// import { initPhoneBook } from 'utils/initPhoneBook';
 import {
   getAllContacts,
   postAllContacts,
@@ -10,7 +10,7 @@ import {
 export const contactsSlice = createSlice({
   name: 'phonebook',
   initialState: {
-    contacts: initPhoneBook,
+    contacts: [],
     isLoading: false,
     error: null,
   },

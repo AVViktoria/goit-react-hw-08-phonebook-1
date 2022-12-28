@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const HomeView = () => (
   <div className='containerHome'>
     <h1 className='titleHome'>

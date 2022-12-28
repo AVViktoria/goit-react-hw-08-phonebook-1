@@ -41,18 +41,7 @@ export const delAllContacts = createAsyncThunk(
     }
   }
 );
-// export const editContacts = createAsyncThunk(
-//   'contacts/editContact',
 
-//   async (contact, { rejectWithValue }) => {
-//     try {
-//       const response = await axios.put(`/contacts/${contact.id}`, contact);
-//       return response.data;
-//     } catch (error) {
-//       return rejectWithValue(error);
-//     }
-//   }
-// );
 export const editContacts = createAsyncThunk(
   'contacts/editContacts',
   async (contact, thunkAPI) => {
@@ -69,50 +58,3 @@ export const editContacts = createAsyncThunk(
     }
   },
 );
-// export const getAllContacts = createAsyncThunk(
-//   'contacts/getAllContacts',
-//   async (_, { rejectWithValue }) => {
-//     try {
-//       const allContactsGet = await contactsApi.getContacts();
-//       return allContactsGet;
-//     } catch (error) {
-//       return rejectWithValue(error.message);
-//     }
-//   }
-// );
-
-// export const postAllContacts = createAsyncThunk(
-//   'contacts/postAllContacts',
-//   async (contact, { rejectWithValue }) => {
-//     try {
-//       const allContactsPost = await contactsApi.postContacts(contact);
-//       return allContactsPost;
-//     } catch (error) {
-//       return rejectWithValue(error.message);
-//     }
-//   }
-// );
-
-// export const delAllContacts = createAsyncThunk(
-//   'contacts/delAllContacts',
-//   async (id, { rejectWithValue }) => {
-//     try {
-//       const allContactsDel = await contactsApi.deleteContacts(id);
-//       return allContactsDel;
-//     } catch (error) {
-//       return rejectWithValue(error.message);
-//     }
-//   }
-// );
-
-// export const editContacts = createAsyncThunk(
-//   'contacts/editContacts',
-//   async (contact, { rejectWithValue }) => {
-//     try {
-//       const allContactsDel = await contactsApi.putContacts(contact);
-//       return allContactsDel;
-//     } catch (error) {
-//       return rejectWithValue(error.message);
-//     }
-//   }
-// );

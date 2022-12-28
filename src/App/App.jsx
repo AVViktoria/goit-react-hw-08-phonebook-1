@@ -3,11 +3,13 @@ import { Route, Routes } from 'react-router-dom';
 //*      Components      //
 import RestrictedRoute from '../components/RestrictedRoute';
 import PrivateRoute from '../components/PrivateRoute';
+import HomeView from 'views/HomeView';
+import AppBar from 'components/AppBar';
 
 //*      styles      //
 import '../index.scss';
 
-//*      Auth selectors      //
+
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, Suspense, lazy } from 'react';
 import { authOperations, authSelectors } from '../redux/auth';
@@ -16,8 +18,8 @@ import { authOperations, authSelectors } from '../redux/auth';
 
 const LoginView = lazy(() => import('../views/LoginView'));
 const RegisterView = lazy(() => import('../views/RegisterView'));
-const HomeView = lazy(() => import('../views/HomeView'));
-const AppBar = lazy(() => import('../components/AppBar'));
+// const HomeView = lazy(() => import('../views/HomeView'));
+// const AppBar = lazy(() => import('../components/AppBar'));
 const Phonebook = lazy(() => import('../components/Phonebook'));
 
 

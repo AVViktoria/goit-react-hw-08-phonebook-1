@@ -16,11 +16,6 @@ import {
 import storage from 'redux-persist/lib/storage'; // defaults to localStorage for web
 
 //*       Persist            //
-// const persistConfig = {
-//   key: 'root',
-//   storage,
-// };
-
 const authPersistConfig = {
   key: 'auth',
   storage,
@@ -30,17 +25,12 @@ const authPersistConfig = {
 const persistedContacts = persistReducer(authPersistConfig, contactsReducer);
 const persistAuth = persistReducer(authPersistConfig, authReducer);
 
-// const rootReducer = combineReducers({
-//   filter: filterReducer,
-//   phonebook: persistedContacts,
-// });
 
 export const store = configureStore({
   reducer: {
     auth: persistAuth,
     filter: filterReducer,
   phonebook: persistedContacts,
-    // reducer: rootReducer,
   },
   middleware(getDefaultMiddleware) {
     return getDefaultMiddleware({
