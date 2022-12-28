@@ -6,7 +6,7 @@ import {
   getIsLoadingSelector,
   getFilteredContacts,
 } from '../../redux/contactsAll/contactsSelectors';
-import  ContactListItem  from 'components/ContactListItem/ContactListItem';
+import  ContactListItem  from '../ContactListItem';
 
 const ContactList=()=> {
   const dispatch = useDispatch();
@@ -14,9 +14,9 @@ const ContactList=()=> {
   const isLoading = useSelector(getIsLoadingSelector);
 
   useEffect(() => {
-    dispatch(getAllContacts());
+    dispatch(getAllContacts(prev => !prev));
   }, [dispatch]);
-
+ 
   return (
     <>
       {isLoading ? (

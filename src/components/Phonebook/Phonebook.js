@@ -20,7 +20,7 @@ export default function Phonebook() {
   const error = useSelector(getError);
 
   useEffect(() => {
-    dispatch(getAllContacts());
+    dispatch(getAllContacts(prev => !prev));
   }, [dispatch]);
 
   return (

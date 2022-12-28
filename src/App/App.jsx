@@ -20,14 +20,15 @@ const HomeView = lazy(() => import('../views/HomeView'));
 const AppBar = lazy(() => import('../components/AppBar'));
 const Phonebook = lazy(() => import('../components/Phonebook'));
 
-//*      Root      //
-export default function App() {
+
+const  App=()=> {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
 
   useEffect(() => {
-    dispatch(authOperations.fetchCurrentUser());
+    dispatch(authOperations.fetchCurrentUser(prev => !prev));
   }, [dispatch]);
+
 
   return isFetchingCurrentUser ? (
     <h1>Loading...</h1>
@@ -69,3 +70,4 @@ export default function App() {
   );
 };
 
+export default App;
