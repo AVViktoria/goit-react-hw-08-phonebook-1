@@ -6,7 +6,7 @@ import {
   editContacts,
 } from '../../redux/contactsAll/contactsOperations';
 
-export const ContactListItem = ({ contact }) => {
+const ContactListItem = ({ contact }) => {
   const dispatch = useDispatch();
   const [isEdit, setIsEdit] = useState(false);
   const [name, setName] = useState(contact.name);
@@ -89,3 +89,4 @@ ContactListItem.propTypes = {
     })
   ),
 };
+export default ContactListItem;

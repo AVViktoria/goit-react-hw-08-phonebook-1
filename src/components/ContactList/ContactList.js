@@ -6,8 +6,9 @@ import {
   getIsLoadingSelector,
   getFilteredContacts,
 } from '../../redux/contactsAll/contactsSelectors';
-import { ContactListItem } from 'components/ContactListItem/ContactListItem';
-export default function ContactList() {
+import  ContactListItem  from 'components/ContactListItem/ContactListItem';
+
+const ContactList=()=> {
   const dispatch = useDispatch();
   const contacts = useSelector(getFilteredContacts);
   const isLoading = useSelector(getIsLoadingSelector);
@@ -40,3 +41,4 @@ ContactList.propTypes = {
     })
   ),
 };
+export default ContactList;

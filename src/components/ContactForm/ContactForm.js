@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postAllContacts } from '../../redux/contactsAll/contactsOperations';
 import { itemsSelector } from '../../redux/contactsAll/contactsSelectors';
 
-export default function ContactForm() {
+const ContactForm=()=> {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
@@ -99,3 +99,4 @@ ContactForm.prototype = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
 };
+export default ContactForm;
