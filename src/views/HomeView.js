@@ -3,8 +3,8 @@ import React from 'react';
 
 
 const HomeView = () => (
-  <div className='container'>
-    <h1 className='title'>
+  <div className='containerHome'>
+    <h1 className='titleHome'>
       Приветственная страница нашего сервиса{' '}
       <span role="img" aria-label="Иконка приветствия">
         💁‍♀️
