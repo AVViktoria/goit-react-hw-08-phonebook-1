@@ -1,0 +1,178 @@
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.container {
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  width: 320px;
+  padding: 25px;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+
+.title:hover,
+.title:focus {
+  color: #03e9f4;
+}
+
+.section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  margin: 15px;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+
+.inputBox {
+  position: relative;
+}
+
+.inputContent {
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.inputLabel {
+  padding: 10px 0;
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+}
+
+.inputContent:focus,
+.inputContent:hover {
+  background-color: #044f53;
+}
+
+.inputButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 30px;
+  letter-spacing: 4px;
+  border-radius: 5px;
+}
+
+.inputButton:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
+}
+
+.listButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 25px;
+  padding: 5px 10px;
+  color: #03e9f4;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border-radius: 5px;
+}
+
+.listButton:hover {
+  background: #03e9f4;
+  color: #fff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
+}
+
+.listContacts {
+  margin-bottom: 10px;
+}
+
+.titleContact {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contact {
+  margin-bottom: 5px;
+}
+
+.listButton {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-left: 25px;
+  padding: 5px 10px;
+  color: #03e9f4;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  border-radius: 5px;
+}
+
+.listButton:hover {
+  background: #03e9f4;
+  color: #fff;
+  box-shadow: 0 0 5px #03e9f4, 0 0 15px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4;
+}
+
+.listContacts {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=index.css.map */

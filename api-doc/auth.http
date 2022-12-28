@@ -1,0 +1,10 @@
+@baseUrl = https://connections-api.herokuapp.com
+
+# login
+POST {{baseUrl}}/users/login
+  Content-type: application/json
+  
+  {
+   "email": "test@teaty.com",
+  "password": "pas12345"
+  }
