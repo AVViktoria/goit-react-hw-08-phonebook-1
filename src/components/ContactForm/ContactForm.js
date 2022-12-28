@@ -36,8 +36,6 @@ export default function ContactForm() {
   const reset = evt => {
     setName('');
     setNumber('');
-    // evt.target.name.value = '';
-    // evt.target.number.value = '';
   };
 
   // *  прописываем  внутри инпута   //
@@ -101,10 +99,3 @@ ContactForm.prototype = {
   name: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
 };
-
-// const addContact = e => {
-//   e.preventDefault();
-//   const form = e.currentTarget;
-//   dispatch(postAllContacts({ name, number }));
-//   form.reset();
-// };

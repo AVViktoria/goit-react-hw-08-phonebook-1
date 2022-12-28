@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { filterChanges } from 'redux/filter/filterSlice';
 import { filterSelector } from '../../redux/contactsAll/contactsSelectors';
 
-export default function Filter()  {
+export default function Filter() {
   const dispatch = useDispatch();
   const filter = useSelector(filterSelector);
 
@@ -32,9 +32,8 @@ export default function Filter()  {
       </div>
     </form>
   );
-};
+}
 Filter.prototype = {
   value: PropTypes.string.isRequired,
   onValueChanges: PropTypes.func.isRequired,
 };
-
