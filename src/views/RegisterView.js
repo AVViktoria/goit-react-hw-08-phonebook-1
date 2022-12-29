@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../redux/auth';
-import {  useNavigate, useLocation } from 'react-router-dom';
-
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import {
   Grid,
@@ -19,7 +18,6 @@ import {
 
 import CssBaseline from '@mui/material/CssBaseline';
 import MailLockIcon from '@mui/icons-material/MailLock';
-// import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 export default function RegisterView() {
@@ -103,15 +101,15 @@ export default function RegisterView() {
             >
               <TextField
                 autoComplete="given-name"
-                margin="normal"
-                name="Name"
+                name="name"
                 required
                 fullWidth
-                id="Name"
                 label="Name"
+                autoFocus
+                margin="normal"
+                id="name"
                 value={name}
                 onChange={handleChange}
-                autoFocus
               />
               <TextField
                 margin="normal"
@@ -137,7 +135,7 @@ export default function RegisterView() {
                 onChange={handleChange}
                 autoComplete="current-password"
               />
-
+</Box>
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
@@ -153,13 +151,17 @@ export default function RegisterView() {
               </Button>
               <Grid container justifyContent="flex-end">
                 <Grid item>
-                  <Link href="/goit-react-hw-08-phonebook-1/login" variant="body2" onClick = {goSignIn}>
+                  <Link
+                    href="/goit-react-hw-08-phonebook-1/login"
+                    variant="body2"
+                    onClick={goSignIn}
+                  >
                     Already have an account? Sign in
                   </Link>
                 </Grid>
               </Grid>
             </Box>
-          </Box>
+          
         </Grid>
       </Grid>
     </ThemeProvider>
