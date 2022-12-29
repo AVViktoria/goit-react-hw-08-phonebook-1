@@ -70,7 +70,7 @@ export default function LoginView() {
             backgroundPosition: 'center',
           }}
         />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
+        <Grid  item xs={12} sm={8} md={5} component={Paper} elevation={6} sx={{  backgroundColor:'#ebecf1e0'}}square >
           <Box
             sx={{
               my: 8,
@@ -78,6 +78,7 @@ export default function LoginView() {
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
+              
             }}
           >
             <Avatar sx={{ m: 1, bgcolor: '#276cb0' }}>

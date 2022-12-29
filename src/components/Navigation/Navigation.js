@@ -20,7 +20,7 @@ const Navigation = () => {
   return (
     <>
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Button size="medium" onClick={goHome}>
+        <Button size="large" onClick={goHome}>
           Home
         </Button>
       </Toolbar>
@@ -35,7 +35,7 @@ const Navigation = () => {
             color="inherit"
             align="center"
             noWrap
-            sx={{ flex: 1, ml: 3, color: '#26658e' }}
+            sx={{ flex: 1, ml: 3, color: '#212d35' }}
           >
             Phonebook
           </Link>
