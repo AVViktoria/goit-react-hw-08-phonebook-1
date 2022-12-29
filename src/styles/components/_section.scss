@@ -6,9 +6,27 @@
   display: flex;
   margin: 15px;
   padding: 20px;
-  background: #0b0c23d6;
+  background: #4e5564;
   box-sizing: border-box;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   
 }
+.container {
+  padding: 0;
+  color: #fff;
+  text-align: center;
+  width: 320px;
+  padding: 25px;
+}
+.title {
+  margin-bottom: 30px;
+  font-size: 35px;
+}
+.title:hover,
+.title:focus {
+  color: #03e9f4;
+}
+
+
+

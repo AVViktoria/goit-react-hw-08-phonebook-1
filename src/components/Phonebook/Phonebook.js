@@ -27,13 +27,11 @@ export default function Phonebook() {
     <>
       <Section>
         <Container>
-          
           <ContactForm />
         </Container>
         {allContacts.length ? (
           <>
             <Container>
-              <h2 className="title">Contacts</h2>
               <Filter />
               {isLoading && !error && <b>Request in progress...</b>}
               <ContactList />

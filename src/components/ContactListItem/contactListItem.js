@@ -5,7 +5,16 @@ import {
   delAllContacts,
   editContacts,
 } from '../../redux/contactsAll/contactsOperations';
-
+// import {
+//   Grid,
+//   IconButton,
+//   Button,
+//   Typography,
+//   TextField,
+//   Box,
+// } from '@mui/material';
+// import FolderIcon from '@mui/icons-material/Folder';
+// import DeleteIcon from '@mui/icons-material/Delete';
 export default function  ContactListItem ({ contact }) {
   const dispatch = useDispatch();
   const [isEdit, setIsEdit] = useState(false);
@@ -89,3 +98,46 @@ ContactListItem.propTypes = {
     })
   ),
 };
+
+//  <li className="listContacts">
+//   {isEdit ? (
+//     <>
+//       {' '}
+//       <label>
+//         Name
+//         <input
+//           onChange={handleChange}
+//           name="name"
+//           type="text"
+//           value={name}
+//         />
+//       </label>
+//       {'  '}
+//       <label>
+//         Number
+//         <input
+//           onChange={handleChange}
+//           name="number"
+//           type="text"
+//           value={number}
+//         />
+//       </label>
+//     </>
+//   ) : (
+//     <div className="titleContact">
+//       <span className="contact">Name: {contact.name}</span>
+//       {'  '}
+//       <span className="contact">Number: {contact.number}</span>
+//     </div>
+//   )}
+//   <button className="listButton" type="button" onClick={handleEdit}>
+//     {isEdit ? 'Save' : 'Edit'}
+//   </button>
+//   <button
+//     className="listButton"
+//     type="button"
+//     onClick={() => deleteContactItem(contact.id)}
+//   >
+//     x
+//   </button>
+// </li>
