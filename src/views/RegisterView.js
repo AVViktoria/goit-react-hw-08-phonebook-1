@@ -135,7 +135,7 @@ export default function RegisterView() {
                 onChange={handleChange}
                 autoComplete="current-password"
               />
-</Box>
+
               <FormControlLabel
                 control={<Checkbox value="allowExtraEmails" color="primary" />}
                 label="I want to receive inspiration, marketing promotions and updates via email."
@@ -161,7 +161,7 @@ export default function RegisterView() {
                 </Grid>
               </Grid>
             </Box>
-          
+          </Box>
         </Grid>
       </Grid>
     </ThemeProvider>
