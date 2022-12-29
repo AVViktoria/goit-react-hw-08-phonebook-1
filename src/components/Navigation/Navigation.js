@@ -1,16 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { NavLink } from 'react-router-dom';
-import Typography from '@mui/material/Typography';
-import Toolbar from '@mui/material/Toolbar';
-import {  useNavigate, useLocation } from 'react-router-dom';
-
-import Button from '@mui/material/Button';
+// import { NavLink } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { authSelectors } from '../../redux/auth';
-
-const Navigation=() =>{
+import { Toolbar, Button, Link } from '@mui/material';
+const Navigation = () => {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
-
 
   let navigate = useNavigate();
   let location = useLocation();
@@ -18,31 +13,45 @@ const Navigation=() =>{
   const goHome = () => {
     navigate(location?.state?.from || '/');
   };
-
+  const goContacts = () => {
+    navigate(location?.state?.from || '/contacts');
+  };
 
   return (
     <>
-    <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-    <Button size="small" onClick = {goHome}>Home</Button>
-      <Typography
-          component="h2"
-          variant="h5"
-          color="inherit"
-          align="center"
-          noWrap
-          sx={{ flex: 1 }}
-        >
-          Phonebook
-        </Typography>
+      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+        <Button size="medium" onClick={goHome}>
+          Home
+        </Button>
+      </Toolbar>
+
       {isLoggedIn && (
         <>
-          <NavLink to="/contacts" className="link">
+          <Link
+            href="/goit-react-hw-08-phonebook-1/contacts"
+            onClick={goContacts}
+            component="h2"
+            variant="h4"
+            color="inherit"
+            align="center"
+            noWrap
+            sx={{ flex: 1, ml: 3, color: '#26658e' }}
+          >
             Phonebook
-          </NavLink>
+          </Link>
         </>
       )}
-      </Toolbar>
     </>
   );
-}
-export default  Navigation;
+};
+export default Navigation;
+//     <Typography
+//   component="h2"
+//   variant="h4"
+//   color="inherit"
+//   align="center"
+//   noWrap
+//   sx={{ flex: 1, ml: 3, color: '#113044' }}
+// >
+//   Phonebook
+// </Typography>

@@ -27,7 +27,7 @@ export default function Phonebook() {
     <>
       <Section>
         <Container>
-          <h1 className="title">Phonebook</h1>
+          
           <ContactForm />
         </Container>
         {allContacts.length ? (

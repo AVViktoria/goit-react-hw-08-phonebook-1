@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { postAllContacts } from '../../redux/contactsAll/contactsOperations';
 import { itemsSelector } from '../../redux/contactsAll/contactsSelectors';
 
-const ContactForm=()=> {
+const ContactForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const dispatch = useDispatch();
@@ -56,6 +56,7 @@ const ContactForm=()=> {
   return (
     <form onSubmit={addContact}>
       <div className="inputBox">
+        <h1 className="title">Phonebook</h1>
         <label className="inputLabel">
           Name
           <input
@@ -92,7 +93,7 @@ const ContactForm=()=> {
       </button>
     </form>
   );
-}
+};
 ContactForm.prototype = {
   addContact: PropTypes.func.isRequired,
   handleChange: PropTypes.func.isRequired,

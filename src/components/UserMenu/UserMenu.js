@@ -1,31 +1,33 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { getUsername } from 'redux/auth/auth-selectors';
+import { useDispatch } from 'react-redux';
+// import { getUsername } from 'redux/auth/auth-selectors';
 import { authOperations } from '../../redux/auth';
-import defaultAvatar from '../../icons/penguin-icon.png';
+// import defaultAvatar from '../../icons/penguin-icon.png';
 
+import { Button } from '@mui/material';
 const UserMenu = () => {
-  const name = useSelector(getUsername);
+  // const name = useSelector(getUsername);
   const dispatch = useDispatch();
-  const avatar = defaultAvatar;
+  // const avatar = defaultAvatar;
 
   return (
     <>
-      <div className="userBox">
-        <img src={avatar} alt="user" width="30" className="userAvatar" />
-        <span className="userGreeting">
-          <span className="userName">{name}</span>, welcome to your Phonebook
-        </span>
-      </div>
-
-      <button
-        onClick={() => {
+      
+      <Button variant="contained" sx={{ mr: 5,  }}  size="small" onClick={() => {
           dispatch(authOperations.logOut());
-        }}
-      >
+        }}>
         Logout
-      </button>
+        </Button>
     </>
   );
 };
 
 export default UserMenu;
+
+
+
+ //<div className="userBox">
+   //     <img src={avatar} alt="user" width="30" className="userAvatar" />
+   //     <span className="userGreeting">
+   //       <span className="userName">{name}</span>, welcome to your Phonebook
+   //     </span>
+ //     </div> 
